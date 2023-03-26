@@ -11,5 +11,5 @@ class CustomBlogData(DynamicFieldsModelSerializer):
     def to_representation(self, instance):
         ret = super().to_representation(instance)
         HOSTIP = socket.gethostbyname(socket.gethostname())
-        ret["thumbnail"] = "http://127.0.0.1:8000/" + ret["thumbnail"]
+        ret["thumbnail"] = "https://blogprojectapi.parthtripathi1.repl.co" + ret["thumbnail"]
         return ret
